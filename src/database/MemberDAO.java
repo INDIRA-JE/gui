@@ -25,7 +25,7 @@ public class MemberDAO {
 
 		Connection con = null;
 		try {
-			DriverManager.getConnection(url, user, password);
+			con=DriverManager.getConnection(url, user, password);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -36,7 +36,7 @@ public class MemberDAO {
 	public Vector<MemberVO> getList() {
 		Vector<MemberVO> vecList = new Vector<MemberVO>();
 		
-		String sql = "select * from meberTBL";
+		String sql = "select * from memberTBL";
 		try (Connection con = getConnection();
 			 PreparedStatement pstmt = con.prepareStatement(sql);
 			 ResultSet rs = pstmt.executeQuery()) {
