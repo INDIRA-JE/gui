@@ -253,16 +253,11 @@ public class JTableTest4 extends JFrame implements ActionListener{
 			}else { //실패
 				JOptionPane.showMessageDialog(this, "삭제실패");
 			}
+		} else if(e.getActionCommand().equals("수정")) {
+			
+		} else if (e.getActionCommand().equals("조회2")) {
+//			33333333
 		}
 	}
 
 }
-
-
-
-
-
-
-
-
-
